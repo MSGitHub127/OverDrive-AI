@@ -216,4 +216,4 @@ The app has two parts that deploy to different platforms:
 
 ## 📄 License
 
-Built by **Vayunotics** for the Last-Minute Life Saver / Proactive Productivity hackathon track.
+Built with ❤️ for the Last-Minute Life Saver / Proactive Productivity hackathon track.
