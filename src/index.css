@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #020617;
+  font-size: 15px; /* Increase baseline size slightly */
+}
+
+/* Linear & Vercel Inspired Aesthetics: Thin borders, spacious margins */
+
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(15, 23, 42, 0) 50%,
+    rgba(2, 6, 23, 0.15) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Subtler neon glows to increase professionalism */
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+}
+
+.text-glow-crimson {
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+}
+
+.text-glow-amber {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+.text-glow-emerald {
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+/* Spacious, Flat Panels with Minimal Borders */
+.glass-panel {
+  background: #090d16;
+  border: 1px solid #1e293b; /* Thin slate border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.glass-panel-cyan {
+  background: #090d16;
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.03);
+}
+
+.glass-panel-crimson {
+  background: #090d16;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.04);
+}
+
+.glow-border-cyan {
+  border-color: rgba(6, 182, 212, 0.4);
+}
+
+.glow-border-crimson {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.glow-border-emerald {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+/* Linear-style grid */
+.cyber-grid {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+}
+
+/* Hide default scrollbars for premium look, use custom styling */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+:root {
+  color-scheme: dark;
+  --bg-sidebar-active: rgba(255, 255, 255, 0.05);
+  --text-sidebar-active: #f8fafc;
+  --text-sidebar-inactive: #94a3b8;
+  --bg-sidebar-hover: rgba(255, 255, 255, 0.02);
+  --text-sidebar-hover: #f1f5f9;
+}
+
+.theme-light {
+  color-scheme: light;
+  --bg-sidebar-active: rgba(0, 0, 0, 0.06);
+  --text-sidebar-active: #0f172a;
+  --text-sidebar-inactive: #334155;
+  --bg-sidebar-hover: rgba(0, 0, 0, 0.03);
+  --text-sidebar-hover: #0f172a;
+}
+
+.theme-light input::placeholder {
+  color: #334155 !important;
+  opacity: 0.9 !important;
+}
+
+/* Interactive Sidebar active states */
+.sidebar-link-active {
+  background-color: var(--bg-sidebar-active);
+  color: var(--text-sidebar-active);
+  border-left: 2px solid #06b6d4;
+}
+
+.sidebar-link-inactive {
+  color: var(--text-sidebar-inactive);
+  border-left: 2px solid transparent;
+}
+
+.sidebar-link-inactive:hover {
+  background-color: var(--bg-sidebar-hover);
+  color: var(--text-sidebar-hover);
+}
+
+/* Fade animations for tab switching */
+.view-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
